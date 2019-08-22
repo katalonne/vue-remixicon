@@ -1,6 +1,6 @@
 {
   "name": "@katalonne/vue-remixicon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remixicon component for vue",
   "license": "MIT",
   "main": "dist/vueremixicon.umd.min.js",
