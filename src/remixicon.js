@@ -1,8 +1,8 @@
-import { iconList, typeExceptions } from './iconList';
-import 'remixicon/fonts/remixicon.css';
+import { iconList, typeExceptions } from "./iconList";
+import "remixicon/fonts/remixicon.css";
 
 export default {
-  name: 'vue-remixicon',
+  name: "vue-remixicon",
   props: {
     name: {
       type: String,
@@ -10,19 +10,19 @@ export default {
     },
     color: {
       type: String,
-      default: '#000'
+      default: "#000"
     },
     className: {
       type: String,
-      default: ''
+      default: ""
     },
     container: {
       type: String,
-      default: 'i'
+      default: "i"
     },
     size: {
       type: String,
-      default: 'fw'
+      default: "fw"
     },
     styles: {
       type: Object,
@@ -32,30 +32,41 @@ export default {
       type: String
     }
   },
-  mounted () {
+  mounted() {
     // validations
-    const iconExists = this.iconList.includes(this.name)
-    if (!iconExists) throw new Error(`[vue-remixicon]: Icon name "${this.name}" - not found`)
+    const iconExists = this.iconList.includes(this.name);
+    if (!iconExists)
+      throw new Error(`[vue-remixicon]: Icon name "${this.name}" - not found`);
 
-    const isException = typeExceptions.includes(this.name)
-    if (isException && Boolean(this.type)) this.type = undefined
-    if (!isException && !(this.type == 'fill' || this.type == 'line')) throw new Error(`[vue-remixicon]: Prop :"type" can take only 'fill' or 'line' values for Icon "${this.name}"`)
+    const isException = typeExceptions.includes(this.name);
+    if (isException && Boolean(this.type)) this.type = undefined;
+    if (!isException && !(this.type == "fill" || this.type == "line"))
+      throw new Error(
+        `[vue-remixicon]: Prop :"type" can take only 'fill' or 'line' values for Icon "${
+          this.name
+        }"`
+      );
   },
   computed: {
-    iconList: function () { return iconList },
-    typeExceptions: function () { return typeExceptions }
+    iconList: function() {
+      return iconList;
+    },
+    typeExceptions: function() {
+      return typeExceptions;
+    }
   },
-  render () {
+  render() {
     const Container = this.container;
     return (
-      <Container 
-      class={`remixicon-${this.name}${this.type ? `-${this.type}` : ''} ri-${this.size} ${this.className}`}
-      style={{
-        color: this.color,
-        ...this.styles
-      }}
-      >
-      </Container>
-    )
+      <Container
+        class={`remixicon-${this.name}${this.type ? `-${this.type}` : ""} ri-${
+          this.size
+        } ${this.className}`}
+        style={{
+          color: this.color,
+          ...this.styles
+        }}
+      />
+    );
   }
-}
+};

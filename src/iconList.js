@@ -849,7 +849,7 @@ const iconList = [
   "zhihu",
   "zoom-in",
   "zoom-out"
-]
+];
 
 const typeExceptions = [
   "align-bottom",
@@ -879,7 +879,4 @@ const typeExceptions = [
   "underline"
 ];
 
-export {
-  iconList,
-  typeExceptions
-}
+export { iconList, typeExceptions };

@@ -25,7 +25,12 @@
         </g>
       </svg>
       Vue Remixicon
-      <vue-remixicon name='remixicon' size='fw' type='line' color="rgba(0,106,255,.8)"/>
+      <vue-remixicon
+        name="remixicon"
+        size="fw"
+        type="line"
+        color="rgba(0,106,255,.8)"
+      />
     </p>
     <div class="container" v-highlight>
       <div class="usage">
@@ -40,9 +45,14 @@
           :content="name"
           v-tippy="{ arrow: true, arrowType: 'round', animation: 'scale' }"
           v-bind:key="name"
-          class='icon-container'
+          class="icon-container"
         >
-          <vue-remixicon size='fw' :name="name" :type="getType(name)" color="#fff" />
+          <vue-remixicon
+            size="fw"
+            :name="name"
+            :type="getType(name)"
+            color="#fff"
+          />
         </div>
       </div>
     </div>
@@ -86,15 +96,19 @@ export default {
     };
   },
   computed: {
-    iconsNames: function() { return iconList },
-    typeExceptions: function () { return typeExceptions }
+    iconsNames: function() {
+      return iconList;
+    },
+    typeExceptions: function() {
+      return typeExceptions;
+    }
   },
   methods: {
-    getUsageTemplate: function () {
+    getUsageTemplate: function() {
       return `<vue-remixicon name='bank' size='fw' type='line' color="#fff"/>`;
     },
     getType: function(iconName) {
-      return this.typeExceptions.includes(iconName) ? '' : 'line'
+      return this.typeExceptions.includes(iconName) ? "" : "line";
     }
   }
 };
