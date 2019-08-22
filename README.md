@@ -13,15 +13,15 @@ Design icons sourced from the [remixicon](https://github.com/Remix-Design/RemixI
 
 ## Installation
 ```bash
-yarn add vue-remixicon
+yarn add @katalonne/vue-remixicon
 
-npm install --save vue-remixicon
+npm install --save @katalonne/vue-remixicon
 ```
 
 ## Usage
 
 ```javascript
-import vueRemixicon from 'vue-remixicon';
+import vueRemixicon from '@katalonne/vue-remixicon';
 
 export default {
   components: {

@@ -1,9 +1,10 @@
 {
-  "name": "vue-remixicon",
+  "name": "@katalonne/vue-remixicon",
   "version": "1.0.0",
   "description": "remixicon component for vue",
   "license": "MIT",
   "main": "dist/vueremixicon.umd.min.js",
+  "author": "Catalin Besleaga <catalinbesleagadev@gmail.com> (http://catalinbesleaga.co/)",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve ./example/main.js --open --mode local",
