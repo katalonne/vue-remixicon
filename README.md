@@ -36,15 +36,15 @@ export default {
 
 ## Props
 
-| Property     | Type    | Default |
-|--------------|---------|---------|
-| name         | String  |         |
-| color        | String  | #000    |
-| type         | String  |         |
-| size         | String  |         |
-| container    | String  | div     |
-| class-name   | String  |         |
-| styles       | Object  | {}      |
+| Property     | Type                      | Default |
+|--------------|---------------------------|---------|
+| name         | String                    |         |
+| color        | String                    | #000    |
+| type         | String ('fill' | 'line')  |         |
+| size         | String                    | fw      |
+| container    | String                    | div     |
+| class-name   | String                    |         |
+| styles       | Object                    | {}      |
 
 ## License
 
